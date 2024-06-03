@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+</head>
+<body>
+	<h2>Register</h2>
+	<form action="register1.php" method="POST">
+      <label>Enter User-Name:</label>
+		<input type="text" name="Username" required><br><br>
+  <label>Enter Pet-ID</label>
+		<input type="text" name="pet_id" required><br><br>
+      <label>Enter Email:</label>
+		<input type="email" name="email" required><br><br>
+	<label>Enter Phone Number:</label>
+		<input type="number" name="phone_number" required><br><br>
+	<label>Enter Password:</label>
+		<input type="password" name="password" required><br><br>
+
+	<input type="submit" name="register" value="Register"><br>
+
+<label>already registered<a href="login.html">login!</a></label>
+	</form>
+</body>
+</html>

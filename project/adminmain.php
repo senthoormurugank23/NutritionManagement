@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+
+<head>
+<title>Admin page</title>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+body
+{
+background-color:rgb(10,50,50);
+}
+</style>
+</head>
+
+<body>
+<main>
+<form method="post" action="">
+<div>
+<center><h1>Nutrition And Management<h1></center><BR>
+
+<center><h1>ADMIN PAGE<h1></center>
+
+<div>
+<center><input type="submit" name="bmr" value="bmr Calculator"></center>
+
+<center><input type="submit" name="bmi" value="bmi Calculator"></center>
+
+<center><input type="submit" name="diet" value="Diet Plan"></center>
+
+<center><input type="submit" name="user" value="user details"></center>
+</div>
+<div>
+<center><input type="submit" name="exi" value="logout"></center>
+</div>
+</div>
+
+<?php 
+if(isset($_POST['bmr']))
+{
+header("location:bmradmin.php");
+exit;
+}
+?>
+
+<?php 
+if(isset($_POST['bmi']))
+{
+header("location:bmiadmin.php");
+exit;
+}
+?>
+
+
+<?php 
+if(isset($_POST['diet']))
+{
+header("location:dietadmin.php");
+exit;
+}
+?>
+
+
+<?php 
+if(isset($_POST['user']))
+{
+header("location:useradmin.php");
+exit;
+}
+?>
+
+<?php 
+if(isset($_POST['exi']))
+{
+header("location:admin.php");
+exit;
+}
+?>
+
+
+
+
+
+</form>
+</main>
+</body>
+</html>

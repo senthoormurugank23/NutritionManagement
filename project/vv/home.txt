@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+<head>
+<title>Nutrition And Management</title>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+.myd{
+border:5px outset red;
+background-color:lightblue;
+text-align:center;
+}
+body
+{
+background-color:rgb(10,50,50);
+}
+</style>
+</head>
+
+<body bgcolor='black'>
+<main>
+<form method="post" action="">
+
+<div class="myd">
+<center><h1>Nutrition And Management<h1></center>
+<center><h3>----------------------------------<h3></center>
+
+<center><input type="submit" name="admin" value="admin"></center>
+
+<center><input type="submit" name="login" value="login"></center>
+</div>
+
+<?php 
+if(isset($_POST['admin']))
+{
+header("location:admin.php");
+exit;
+}
+?>
+
+<?php 
+if(isset($_POST['login']))
+{
+header("location:login.php");
+exit;
+}
+?>
+
+
+</form>
+</main>
+</body>
+</html>

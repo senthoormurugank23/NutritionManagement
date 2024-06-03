@@ -1,0 +1,91 @@
+<html>
+<head>
+<title>CRUD admin</title>
+</head>
+<body>
+<form>
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "nutrition";
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+if(isset($_POST['insert'])) {
+   
+    $min1 = $_POST['min1'];
+    $max1 = $_POST['max1'];
+    $breakfast = $_POST['breakfast'];
+    $snack1 = $_POST['snack1'];
+    $lunch = $_POST['lunch'];
+    $snack2 = $_POST['snack2'];
+    $dinner = $_POST['dinner'];
+    $total_protein = $_POST['total_protein'];
+
+
+    $sql = "INSERT INTO diet ( min1, max1,breakfast,snack1,lunch,snack2,dinner,total_protein) VALUES ( '$min1', '$max1','$breakfast','$snack1','$lunch','$snack2','$dinner','$total_protein')";
+    if ($conn->query($sql) === TRUE) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+}
+
+
+if(isset($_POST['ShowAll'])) {
+
+
+$sql3 = "SELECT * FROM diet";
+$result = $conn->query($sql3);
+
+echo "<table style='border: 1px solid black;'>";
+    echo "<tr><th>ID</th><th>min_pr</th><th>max_pr</th><th>breakfast</th><th>snack1</th><th>lunch</th><th>snack2</th><th>dinner</th><th>Total protein</th></tr>";
+
+if ($result->num_rows > 0) {
+  while($row = $result->fetch_assoc()) {
+ 
+ 
+    echo "<tr>";
+    echo "<td style='border: 1px solid black;'>".$row["id"]."</td>";
+  echo "<td style='border: 1px solid black;'>".$row["min1"]."</td>";
+  echo "<td style='border: 1px solid black;'>".$row["max1"]."</td>";
+    echo "<td style='border: 1px solid black;'>".$row["breakfast"]."</td>";
+     echo "<td style='border: 1px solid black;'>".$row["snack1"]."</td>";
+     echo "<td style='border: 1px solid black;'>".$row["lunch"]."</td>";
+    echo "<td style='border: 1px solid black;'>".$row["snack2"]."</td>";
+     echo "<td style='border: 1px solid black;'>".$row["dinner"]."</td>";
+     echo "<td style='border: 1px solid black;'>".$row["total_protein"]."</td>";
+    echo "</tr>";
+  }
+} else {
+  echo "<tr><td colspan='3'>No results found</td></tr>";
+}
+
+echo "</table>";
+}
+
+if(isset($_POST['delete'])) {
+    
+    $id = $_POST['id'];
+
+    $sql2 = "DELETE FROM diet WHERE id = '$id'";
+    
+    if(mysqli_query($conn, $sql2)) {
+        echo "<center>Record deleted successfully.";
+    } else {
+        echo "Error deleting record: " . mysqli_error($conn)."</center>";
+    }
+}
+
+
+
+
+$conn->close();
+?>
+<a href="dietadmin.php">Back</a>
+</body>
+</html>
+

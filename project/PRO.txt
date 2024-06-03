@@ -1,0 +1,17 @@
+BMR stands for Basal Metabolic Rate, which is the amount of energy or calories required by the body to carry out basic functions such as breathing, circulating blood, and regulating body temperature while at rest. The BMR calculator is a tool that estimates the number of calories a person burns at rest based on their age, gender, height, weight, and activity level.
+By using the Harris – Benedict Equation:
+
+
+For Men:
+                      BMR=(13.397*Weight) + (4.799*Height) – (5.677*age) + 88.362.
+                      For Women:
+BMR=(9.247*Weight) + (3.098*Height) – (4.330*age) + 447.593.
+
+
+BMI stands for Body Mass Index, which is a measure of body fat based on an individual's weight and height. The BMI calculator is a tool that calculates a person's BMI using their weight and height and provides an indication of whether their weight falls within a healthy range.
+BMI = Weight / (Height * Height).
+
+A diet plan is a strategy for eating that outlines what foods to eat, when to eat them, and in what quantities, with the goal of achieving specific health outcomes or weight goals. A well-designed diet plan takes into account an individual's nutritional needs, personal preferences, lifestyle, and any health conditions they may have. To maintain a healthy weight, it's generally recommended to balance calorie intake with calorie expenditure. This means consuming enough calories to support basic bodily functions and physical activity without consuming an excess that leads to weight gain. For weight loss, a calorie deficit is needed, which means burning more calories through physical activity and consuming fewer calories through diet. 
+
+          
+          DIET=Weight * 2. (per 1kilogram equals 2gram of protein).
